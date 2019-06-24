@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16B9DF9DB02964FC24F1E485 /* libPods-YNCommonUtilsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE16C0A7B01E96E9180F35E /* libPods-YNCommonUtilsDemo.a */; };
+		B43D04F722C0615B0005F431 /* YNPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B43D04F522C0615B0005F431 /* YNPickerView.m */; };
 		B4E3E44622BCDC7A00209ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3E44522BCDC7A00209ED1 /* AppDelegate.m */; };
 		B4E3E44922BCDC7A00209ED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3E44822BCDC7A00209ED1 /* ViewController.m */; };
 		B4E3E44C22BCDC7A00209ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E3E44A22BCDC7A00209ED1 /* Main.storyboard */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		281ECE6D43656A0FCB4F96E5 /* Pods-YNCommonUtilsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNCommonUtilsDemo.release.xcconfig"; path = "Target Support Files/Pods-YNCommonUtilsDemo/Pods-YNCommonUtilsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3BE16C0A7B01E96E9180F35E /* libPods-YNCommonUtilsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YNCommonUtilsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43D04F522C0615B0005F431 /* YNPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNPickerView.m; sourceTree = "<group>"; };
+		B43D04F622C0615B0005F431 /* YNPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNPickerView.h; sourceTree = "<group>"; };
 		B4E3E44122BCDC7A00209ED1 /* YNCommonUtilsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNCommonUtilsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E3E44422BCDC7A00209ED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4E3E44522BCDC7A00209ED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 		B4E3E49922BCF3BC00209ED1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B43D04F622C0615B0005F431 /* YNPickerView.h */,
+				B43D04F522C0615B0005F431 /* YNPickerView.m */,
 				B4E3E49A22BCF3BC00209ED1 /* YNCBanner.h */,
 				B4E3E49C22BCF3BC00209ED1 /* YNCBanner.m */,
 				B4E3E49D22BCF3BC00209ED1 /* YNCDatePickerView.h */,
@@ -409,6 +414,7 @@
 				B4E3E45422BCDC7B00209ED1 /* main.m in Sources */,
 				B4E3E4B722BCF3BC00209ED1 /* NSArray+YNOrder.m in Sources */,
 				B4E3E4B622BCF3BC00209ED1 /* UIView+YNC.m in Sources */,
+				B43D04F722C0615B0005F431 /* YNPickerView.m in Sources */,
 				B4E3E4BA22BCF3BC00209ED1 /* UIView+YNFlash.m in Sources */,
 				B4E3E4B822BCF3BC00209ED1 /* NSDate+YNExtension.m in Sources */,
 				B4E3E44622BCDC7A00209ED1 /* AppDelegate.m in Sources */,
