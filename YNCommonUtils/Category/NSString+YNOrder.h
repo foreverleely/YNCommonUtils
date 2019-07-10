@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (YNOrder)
 
-- (NSString *)getRandomLetterStringWithCount:(NSInteger)count;
++ (NSString *)getRandomLetterStringWithCount:(NSInteger)count;
 
 @end
 
