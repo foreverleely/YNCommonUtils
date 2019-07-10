@@ -15,6 +15,7 @@
 		B45742DA22CF641B00479E76 /* NSString+YNEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B45742D922CF641B00479E76 /* NSString+YNEncrypt.m */; };
 		B45742DD22CF651300479E76 /* NSData+YNEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B45742DC22CF651300479E76 /* NSData+YNEncrypt.m */; };
 		B45742E322CF67DF00479E76 /* UIViewController+YNTopMostVc.m in Sources */ = {isa = PBXBuildFile; fileRef = B45742E222CF67DF00479E76 /* UIViewController+YNTopMostVc.m */; };
+		B4938F8E22D585C7008EAF8A /* NSString+YNOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B4938F8D22D585C7008EAF8A /* NSString+YNOrder.m */; };
 		B4E3E44622BCDC7A00209ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3E44522BCDC7A00209ED1 /* AppDelegate.m */; };
 		B4E3E44922BCDC7A00209ED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3E44822BCDC7A00209ED1 /* ViewController.m */; };
 		B4E3E44C22BCDC7A00209ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E3E44A22BCDC7A00209ED1 /* Main.storyboard */; };
@@ -69,6 +70,8 @@
 		B45742DC22CF651300479E76 /* NSData+YNEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+YNEncrypt.m"; sourceTree = "<group>"; };
 		B45742E122CF67DF00479E76 /* UIViewController+YNTopMostVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YNTopMostVc.h"; sourceTree = "<group>"; };
 		B45742E222CF67DF00479E76 /* UIViewController+YNTopMostVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YNTopMostVc.m"; sourceTree = "<group>"; };
+		B4938F8C22D585C7008EAF8A /* NSString+YNOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YNOrder.h"; sourceTree = "<group>"; };
+		B4938F8D22D585C7008EAF8A /* NSString+YNOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YNOrder.m"; sourceTree = "<group>"; };
 		B4E3E44122BCDC7A00209ED1 /* YNCommonUtilsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNCommonUtilsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E3E44422BCDC7A00209ED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4E3E44522BCDC7A00209ED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				B45742D622CF63C300479E76 /* NSArray+YNJson.m */,
 				B45742D822CF641B00479E76 /* NSString+YNEncrypt.h */,
 				B45742D922CF641B00479E76 /* NSString+YNEncrypt.m */,
+				B4938F8C22D585C7008EAF8A /* NSString+YNOrder.h */,
+				B4938F8D22D585C7008EAF8A /* NSString+YNOrder.m */,
 				B45742DB22CF651300479E76 /* NSData+YNEncrypt.h */,
 				B45742DC22CF651300479E76 /* NSData+YNEncrypt.m */,
 				B45742E122CF67DF00479E76 /* UIViewController+YNTopMostVc.h */,
@@ -451,6 +456,7 @@
 				B4E3E4BA22BCF3BC00209ED1 /* UIView+YNFlash.m in Sources */,
 				B45742D122CF627600479E76 /* NSDictionary+YNJson.m in Sources */,
 				B4E3E4B822BCF3BC00209ED1 /* NSDate+YNExtension.m in Sources */,
+				B4938F8E22D585C7008EAF8A /* NSString+YNOrder.m in Sources */,
 				B4E3E44622BCDC7A00209ED1 /* AppDelegate.m in Sources */,
 				B4E3E4B222BCF3BC00209ED1 /* YNCDatePickerView.m in Sources */,
 				B45742D722CF63C300479E76 /* NSArray+YNJson.m in Sources */,
