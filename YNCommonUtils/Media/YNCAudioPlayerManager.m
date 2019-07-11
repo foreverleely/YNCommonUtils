@@ -73,9 +73,15 @@
 }
 
 - (void)stopAudio {
+    [self stopAudioWithDeep:NO];
+}
+
+- (void)stopAudioWithDeep:(BOOL)isDeep {
     if (self.audioPlayer) {
         [self.audioPlayer stop];
-        //        self.audioPlayer = nil;
+        if (isDeep) {
+            self.audioPlayer = nil;
+        }
     }
 }
 

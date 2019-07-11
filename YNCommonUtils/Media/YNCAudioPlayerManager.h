@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)continuePlayAudio;
 - (void)stopAudio;
+- (void)stopAudioWithDeep:(BOOL)isDeep;
 
 - (CGFloat)getCurrent;
 - (CGFloat)getDuration;
