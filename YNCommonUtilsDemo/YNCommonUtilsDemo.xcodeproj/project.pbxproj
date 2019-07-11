@@ -16,6 +16,8 @@
 		B45742DD22CF651300479E76 /* NSData+YNEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B45742DC22CF651300479E76 /* NSData+YNEncrypt.m */; };
 		B45742E322CF67DF00479E76 /* UIViewController+YNTopMostVc.m in Sources */ = {isa = PBXBuildFile; fileRef = B45742E222CF67DF00479E76 /* UIViewController+YNTopMostVc.m */; };
 		B4938F8E22D585C7008EAF8A /* NSString+YNOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B4938F8D22D585C7008EAF8A /* NSString+YNOrder.m */; };
+		B4E2295922D734B7008EE783 /* YNCAVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2295722D734B7008EE783 /* YNCAVPlayerManager.m */; };
+		B4E2295C22D734F2008EE783 /* YNCAudioPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2295B22D734F2008EE783 /* YNCAudioPlayerManager.m */; };
 		B4E3E44622BCDC7A00209ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3E44522BCDC7A00209ED1 /* AppDelegate.m */; };
 		B4E3E44922BCDC7A00209ED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3E44822BCDC7A00209ED1 /* ViewController.m */; };
 		B4E3E44C22BCDC7A00209ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E3E44A22BCDC7A00209ED1 /* Main.storyboard */; };
@@ -72,6 +74,10 @@
 		B45742E222CF67DF00479E76 /* UIViewController+YNTopMostVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YNTopMostVc.m"; sourceTree = "<group>"; };
 		B4938F8C22D585C7008EAF8A /* NSString+YNOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YNOrder.h"; sourceTree = "<group>"; };
 		B4938F8D22D585C7008EAF8A /* NSString+YNOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YNOrder.m"; sourceTree = "<group>"; };
+		B4E2295722D734B7008EE783 /* YNCAVPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNCAVPlayerManager.m; sourceTree = "<group>"; };
+		B4E2295822D734B7008EE783 /* YNCAVPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNCAVPlayerManager.h; sourceTree = "<group>"; };
+		B4E2295A22D734F2008EE783 /* YNCAudioPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNCAudioPlayerManager.h; sourceTree = "<group>"; };
+		B4E2295B22D734F2008EE783 /* YNCAudioPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YNCAudioPlayerManager.m; sourceTree = "<group>"; };
 		B4E3E44122BCDC7A00209ED1 /* YNCommonUtilsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNCommonUtilsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E3E44422BCDC7A00209ED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4E3E44522BCDC7A00209ED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,6 +153,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B4E2295622D734B7008EE783 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				B4E2295822D734B7008EE783 /* YNCAVPlayerManager.h */,
+				B4E2295722D734B7008EE783 /* YNCAVPlayerManager.m */,
+				B4E2295A22D734F2008EE783 /* YNCAudioPlayerManager.h */,
+				B4E2295B22D734F2008EE783 /* YNCAudioPlayerManager.m */,
+			);
+			name = Media;
+			path = ../../YNCommonUtils/Media;
+			sourceTree = "<group>";
+		};
 		B4E3E43822BCDC7A00209ED1 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +190,7 @@
 		B4E3E44322BCDC7A00209ED1 /* YNCommonUtilsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B4E2295622D734B7008EE783 /* Media */,
 				B4E3E4A322BCF3BC00209ED1 /* Category */,
 				B4E3E4A022BCF3BC00209ED1 /* FlowLayout */,
 				B4E3E49E22BCF3BC00209ED1 /* Macro */,
@@ -450,6 +469,7 @@
 				B4E3E45422BCDC7B00209ED1 /* main.m in Sources */,
 				B4E3E4B722BCF3BC00209ED1 /* NSArray+YNOrder.m in Sources */,
 				B4E3E4B622BCF3BC00209ED1 /* UIView+YNC.m in Sources */,
+				B4E2295922D734B7008EE783 /* YNCAVPlayerManager.m in Sources */,
 				B43D04F722C0615B0005F431 /* YNPickerView.m in Sources */,
 				B45742D422CF635F00479E76 /* NSString+YNConvert.m in Sources */,
 				B45742DD22CF651300479E76 /* NSData+YNEncrypt.m in Sources */,
@@ -458,6 +478,7 @@
 				B4E3E4B822BCF3BC00209ED1 /* NSDate+YNExtension.m in Sources */,
 				B4938F8E22D585C7008EAF8A /* NSString+YNOrder.m in Sources */,
 				B4E3E44622BCDC7A00209ED1 /* AppDelegate.m in Sources */,
+				B4E2295C22D734F2008EE783 /* YNCAudioPlayerManager.m in Sources */,
 				B4E3E4B222BCF3BC00209ED1 /* YNCDatePickerView.m in Sources */,
 				B45742D722CF63C300479E76 /* NSArray+YNJson.m in Sources */,
 				B45742E322CF67DF00479E76 /* UIViewController+YNTopMostVc.m in Sources */,

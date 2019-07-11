@@ -1,16 +1,20 @@
 PODS:
   - Masonry (1.1.0)
+  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - Masonry
+  - YYCache
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
+    - YYCache
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 19231d22b6acceb7a2c4ff875685e80011a28e1c
+PODFILE CHECKSUM: ee7377b1fa132c35ec2678e4044c15041145517b
 
 COCOAPODS: 1.6.1

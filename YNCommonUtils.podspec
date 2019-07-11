@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YNCommonUtils"
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.8"
   spec.summary      = "take notes for learning"
 
   # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "the notes include category, view, macro, flowlayout etc, and its updating"
+  spec.description  = "the notes include category, view, macro, flowlayout, media etc, and its updating"
 
   spec.homepage     = "https://github.com/foreverleely/YNCommonUtils"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -88,5 +88,6 @@ Pod::Spec.new do |spec|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
   spec.dependency "Masonry"
+  spec.dependency "YYCache"
 
 end

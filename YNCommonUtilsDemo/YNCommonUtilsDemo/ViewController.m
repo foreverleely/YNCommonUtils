@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "YNCAVPlayerManager.h"
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+#pragma mark - Example For YNCAVPlayer
+
+- (void)addPlayer {
+    
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *filePath = [path stringByAppendingPathComponent:@"test.mp4"];
+    
+    CGRect rect = CGRectMake(0, 0, 0, 0);
+    
+    YNCAVPlayerManager *player = [[YNCAVPlayerManager alloc] initWithFilePath:filePath andFrame:rect];
+
+    player.videoEndBlock = ^{
+        
+    };
+
+    [self.view.layer addSublayer:player.playLayer];
+    [player play];
 }
 
 
