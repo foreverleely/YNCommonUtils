@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YNCommonUtils"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "take notes for learning"
 
   # This description is used to generate tags and improve search results.
@@ -89,5 +89,6 @@ Pod::Spec.new do |spec|
   
   spec.dependency "Masonry"
   spec.dependency "YYCache"
+  spec.dependency "YYModel"
 
 end
