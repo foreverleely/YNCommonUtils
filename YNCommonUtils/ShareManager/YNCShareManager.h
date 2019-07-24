@@ -47,6 +47,10 @@ NS_ASSUME_NONNULL_BEGIN
               ShareText:(NSString *)shareText
             ShareUrlStr:(NSString *)shareUrlStr;
 
+- (void)shareImage:(UIImage *)image
+                vc:(UIViewController *)viewController
+             point:(CGPoint)point;
+
 @end
 
 NS_ASSUME_NONNULL_END

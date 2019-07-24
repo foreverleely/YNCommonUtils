@@ -162,7 +162,9 @@
 
 #pragma mark - Share Image
 
-- (void)shareImage:(UIImage *)image vc:(UIViewController *)viewController point:(CGPoint)point {
+- (void)shareImage:(UIImage *)image
+                vc:(UIViewController *)viewController
+             point:(CGPoint)point {
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[image] applicationActivities:nil];
     
