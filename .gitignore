@@ -34,7 +34,16 @@ xcuserdata/
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+Pods/
+*.xcworkspace
+Podfile.lock
+**/Podfile.lock
+.DS_Store
+**/.DS_Store
+.swift-version
+*.xcworkspace/
+**/*.xcworkspace/
+.swift-version
 
 # Carthage
 #
