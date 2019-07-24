@@ -3,4 +3,5 @@ target 'YNCommonUtilsDemo' do
     
     pod 'Masonry'
     pod 'YYCache'
+    pod 'YYModel'
 end

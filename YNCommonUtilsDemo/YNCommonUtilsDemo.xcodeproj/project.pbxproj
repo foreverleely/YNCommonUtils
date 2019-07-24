@@ -16,6 +16,8 @@
 		B45742DD22CF651300479E76 /* NSData+YNEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B45742DC22CF651300479E76 /* NSData+YNEncrypt.m */; };
 		B45742E322CF67DF00479E76 /* UIViewController+YNTopMostVc.m in Sources */ = {isa = PBXBuildFile; fileRef = B45742E222CF67DF00479E76 /* UIViewController+YNTopMostVc.m */; };
 		B4938F8E22D585C7008EAF8A /* NSString+YNOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B4938F8D22D585C7008EAF8A /* NSString+YNOrder.m */; };
+		B4C95B3722E85FD900EBBBDC /* YNCShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C95B3322E85FD800EBBBDC /* YNCShareManager.m */; };
+		B4C95B3822E85FD900EBBBDC /* YNCSaveDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C95B3622E85FD800EBBBDC /* YNCSaveDataManager.m */; };
 		B4E2295922D734B7008EE783 /* YNCAVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2295722D734B7008EE783 /* YNCAVPlayerManager.m */; };
 		B4E2295C22D734F2008EE783 /* YNCAudioPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2295B22D734F2008EE783 /* YNCAudioPlayerManager.m */; };
 		B4E3E44622BCDC7A00209ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E3E44522BCDC7A00209ED1 /* AppDelegate.m */; };
@@ -74,6 +76,10 @@
 		B45742E222CF67DF00479E76 /* UIViewController+YNTopMostVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YNTopMostVc.m"; sourceTree = "<group>"; };
 		B4938F8C22D585C7008EAF8A /* NSString+YNOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YNOrder.h"; sourceTree = "<group>"; };
 		B4938F8D22D585C7008EAF8A /* NSString+YNOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YNOrder.m"; sourceTree = "<group>"; };
+		B4C95B3222E85FD800EBBBDC /* YNCShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNCShareManager.h; sourceTree = "<group>"; };
+		B4C95B3322E85FD800EBBBDC /* YNCShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNCShareManager.m; sourceTree = "<group>"; };
+		B4C95B3522E85FD800EBBBDC /* YNCSaveDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNCSaveDataManager.h; sourceTree = "<group>"; };
+		B4C95B3622E85FD800EBBBDC /* YNCSaveDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNCSaveDataManager.m; sourceTree = "<group>"; };
 		B4E2295722D734B7008EE783 /* YNCAVPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNCAVPlayerManager.m; sourceTree = "<group>"; };
 		B4E2295822D734B7008EE783 /* YNCAVPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNCAVPlayerManager.h; sourceTree = "<group>"; };
 		B4E2295A22D734F2008EE783 /* YNCAudioPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNCAudioPlayerManager.h; sourceTree = "<group>"; };
@@ -153,6 +159,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B4C95B3122E85FD800EBBBDC /* ShareManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4C95B3222E85FD800EBBBDC /* YNCShareManager.h */,
+				B4C95B3322E85FD800EBBBDC /* YNCShareManager.m */,
+			);
+			name = ShareManager;
+			path = ../../YNCommonUtils/ShareManager;
+			sourceTree = "<group>";
+		};
+		B4C95B3422E85FD800EBBBDC /* SaveManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4C95B3522E85FD800EBBBDC /* YNCSaveDataManager.h */,
+				B4C95B3622E85FD800EBBBDC /* YNCSaveDataManager.m */,
+			);
+			name = SaveManager;
+			path = ../../YNCommonUtils/SaveManager;
+			sourceTree = "<group>";
+		};
 		B4E2295622D734B7008EE783 /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +216,8 @@
 		B4E3E44322BCDC7A00209ED1 /* YNCommonUtilsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B4C95B3422E85FD800EBBBDC /* SaveManager */,
+				B4C95B3122E85FD800EBBBDC /* ShareManager */,
 				B4E2295622D734B7008EE783 /* Media */,
 				B4E3E4A322BCF3BC00209ED1 /* Category */,
 				B4E3E4A022BCF3BC00209ED1 /* FlowLayout */,
@@ -471,6 +499,8 @@
 				B4E3E4B622BCF3BC00209ED1 /* UIView+YNC.m in Sources */,
 				B4E2295922D734B7008EE783 /* YNCAVPlayerManager.m in Sources */,
 				B43D04F722C0615B0005F431 /* YNPickerView.m in Sources */,
+				B4C95B3822E85FD900EBBBDC /* YNCSaveDataManager.m in Sources */,
+				B4C95B3722E85FD900EBBBDC /* YNCShareManager.m in Sources */,
 				B45742D422CF635F00479E76 /* NSString+YNConvert.m in Sources */,
 				B45742DD22CF651300479E76 /* NSData+YNEncrypt.m in Sources */,
 				B4E3E4BA22BCF3BC00209ED1 /* UIView+YNFlash.m in Sources */,
