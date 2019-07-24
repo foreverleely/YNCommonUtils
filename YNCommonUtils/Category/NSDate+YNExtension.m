@@ -114,6 +114,76 @@
     return [dayComponents second];
 }
 
+- (BOOL)ync_isLeapYear {
+    return [NSDate ync_isLeapYear:self];
+}
+
++ (BOOL)ync_isLeapYear:(NSDate *)date {
+    NSUInteger year = [date ync_year];
+    if ((year % 4  == 0 && year % 100 != 0) || year % 400 == 0) {
+        return YES;
+    }
+    return NO;
+}
+
+- (NSInteger)ync_daysInMonth:(NSUInteger)month {
+    return [NSDate ync_daysInMonth:self month:month];
+}
+
++ (NSUInteger)ync_daysInMonth:(NSDate *)date month:(NSUInteger)month {
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            return 31;
+        case 2:
+            return [date ync_isLeapYear] ? 29 : 28;
+    }
+    return 30;
+}
+
++ (NSString *)ync_monthWithMonthNumber:(NSInteger)month {
+    switch(month) {
+        case 1:
+            return @"January";
+            break;
+        case 2:
+            return @"February";
+            break;
+        case 3:
+            return @"March";
+            break;
+        case 4:
+            return @"April";
+            break;
+        case 5:
+            return @"May";
+            break;
+        case 6:
+            return @"June";
+            break;
+        case 7:
+            return @"July";
+            break;
+        case 8:
+            return @"August";
+            break;
+        case 9:
+            return @"September";
+            break;
+        case 10:
+            return @"October";
+            break;
+        case 11:
+            return @"November";
+            break;
+        case 12:
+            return @"December";
+            break;
+        default:
+            break;
+    }
+    return @"";
+}
+
 #pragma mark - Constellation
 
 + (NSString *)getConstellationNameByMonthIndex:(NSInteger)monthIndex
@@ -126,6 +196,34 @@
         index = monthIndex;
     } else index = (monthIndex - 1 + 12) % 12;
     return [constellations objectAtIndex:index];
+}
+
+#pragma mark - Jan 1st. 1970
+
+- (NSString *)ync_getMonDayYear {
+    
+    return [NSDate ync_getMonDayYearWith:self];
+}
+
++ (NSString *)ync_getMonDayYearWith:(NSDate *)date {
+    
+    NSString *monthStr = [NSDate ync_monthWithMonthNumber:[date ync_month]];
+    if (monthStr.length > 3) {
+        monthStr = [monthStr substringToIndex:3];
+    }
+    NSInteger day = [date ync_day];
+    NSString *dayStr = @"";
+    if (day == 1) {
+        dayStr = @"1st";
+    } else if (day == 2) {
+        dayStr = @"2nd";
+    } else if (day == 3) {
+        dayStr = @"3rd";
+    } else {
+        dayStr = [NSString stringWithFormat:@"%ldth", (long)day];
+    }
+    NSString *yearStr = @([date ync_year]).stringValue;
+    return [NSString stringWithFormat:@"%@. %@ %@", monthStr, dayStr, yearStr];
 }
 
 @end

@@ -29,10 +29,21 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSUInteger)ync_minute:(NSDate *)date;
 + (NSUInteger)ync_second:(NSDate *)date;
 
+- (BOOL)ync_isLeapYear;
++ (BOOL)ync_isLeapYear:(NSDate *)date;
+
+- (NSInteger)ync_daysInMonth:(NSUInteger)month;
++ (NSUInteger)ync_daysInMonth:(NSDate *)date month:(NSUInteger)month;
+
 #pragma mark - Constellation
 
 + (NSString *)getConstellationNameByMonthIndex:(NSInteger)monthIndex
                                       dayIndex:(NSInteger)dayIndex;
+
+#pragma mark - Jan 1st. 1970
+
+- (NSString *)ync_getMonDayYear;
++ (NSString *)ync_getMonDayYearWith:(NSDate *)date;
 
 @end
 
