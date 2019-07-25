@@ -10,7 +10,7 @@
 #import <Social/Social.h>
 #import <MessageUI/MessageUI.h>
 
-@interface YNCShareManager ()<MFMessageComposeViewControllerDelegate>
+@interface YNCShareManager ()<MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, weak) UIViewController *vc;
 
@@ -36,10 +36,10 @@
     
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://app"]]) {
         
-        [self shareWithType:YNCShareManagerTypeTwitter vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr];
+        [self shareWithType:YNCShareManagerTypeTwitter vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:@[]];
     } else {
         
-        [self shareWithType:YNCShareManagerTypeMore vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr];
+        [self shareWithType:YNCShareManagerTypeMore vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:@[]];
     }
     
 }
@@ -52,10 +52,10 @@
     
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"fb://app"]]) {
         
-        [self shareWithType:YNCShareManagerTypeFacebook vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr];
+        [self shareWithType:YNCShareManagerTypeFacebook vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:@[]];
     } else {
         
-        [self shareWithType:YNCShareManagerTypeMore vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr];
+        [self shareWithType:YNCShareManagerTypeMore vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:@[]];
     }
     
 }
@@ -66,7 +66,17 @@
                ShareText:(NSString *)shareText
              ShareUrlStr:(NSString *)shareUrlStr {
     
-    [self shareWithType:YNCShareManagerTypeMessage vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr];
+    [self shareWithType:YNCShareManagerTypeMessage vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:@[]];
+}
+
+- (void)shareToMailWithVc:(UIViewController *)viewController
+                  PopView:(UIView *)view
+                    Point:(CGPoint)point
+                ShareText:(NSString *)shareText
+              ShareUrlStr:(NSString *)shareUrlStr
+         mailToRecipients:(NSArray *)mailToRecipients {
+    
+    [self shareWithType:YNCShareManagerTypeMessage vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:mailToRecipients];
 }
 
 - (void)shareMoreWithVc:(UIViewController *)viewController
@@ -75,7 +85,7 @@
               ShareText:(NSString *)shareText
             ShareUrlStr:(NSString *)shareUrlStr {
     
-    [self shareWithType:YNCShareManagerTypeMore vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr];
+    [self shareWithType:YNCShareManagerTypeMore vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:@[]];
 }
 
 /**
@@ -93,7 +103,8 @@
               popView:(UIView *)view
                 point:(CGPoint)point
             shareText:(NSString *)shareText
-          shareUrlStr:(NSString *)shareUrlStr {
+          shareUrlStr:(NSString *)shareUrlStr
+     mailToRecipients:(NSArray *)mailToRecipients {
     
     switch (shareType) {
         case YNCShareManagerTypeTwitter:
@@ -137,6 +148,20 @@
             self.vc = viewController;
             [msgVc setBody:[NSString stringWithFormat:@"%@\n\n%@", shareText, shareUrlStr]];
             [viewController presentViewController:msgVc animated:YES completion:nil];
+        }
+            break;
+        case YNCShareManagerTypeMail:
+        {
+            if (![MFMailComposeViewController canSendMail]) {
+                return;
+            }
+            MFMailComposeViewController *mailVc = [[MFMailComposeViewController alloc] init];
+            mailVc.mailComposeDelegate = self;
+            self.vc = viewController;
+            [mailVc setSubject:shareText];
+            [mailVc setToRecipients:mailToRecipients];
+            [mailVc setMessageBody:shareUrlStr isHTML:NO];
+            [viewController presentViewController:mailVc animated:YES completion:nil];
         }
             break;
         case YNCShareManagerTypeMore:
@@ -186,6 +211,12 @@
     if (self.vc) {
         [self.vc dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(nullable NSError *)error {
+    
 }
 
 @end

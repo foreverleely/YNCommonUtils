@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, YNCShareManagerType)
     YNCShareManagerTypeTwitter = 0,
     YNCShareManagerTypeFacebook,
     YNCShareManagerTypeMessage,
+    YNCShareManagerTypeMail,
     YNCShareManagerTypeMore
 };
 
@@ -40,6 +41,13 @@ NS_ASSUME_NONNULL_BEGIN
                    Point:(CGPoint)point
                ShareText:(NSString *)shareText
              ShareUrlStr:(NSString *)shareUrlStr;
+
+- (void)shareToMailWithVc:(UIViewController *)viewController
+                  PopView:(UIView *)view
+                    Point:(CGPoint)point
+                ShareText:(NSString *)shareText
+              ShareUrlStr:(NSString *)shareUrlStr
+         mailToRecipients:(NSArray *)mailToRecipients;
 
 - (void)shareMoreWithVc:(UIViewController *)viewController
                 PopView:(UIView *)view
