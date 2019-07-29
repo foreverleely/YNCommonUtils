@@ -76,7 +76,7 @@
               ShareUrlStr:(NSString *)shareUrlStr
          mailToRecipients:(NSArray *)mailToRecipients {
     
-    [self shareWithType:YNCShareManagerTypeMessage vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:mailToRecipients];
+    [self shareWithType:YNCShareManagerTypeMail vc:viewController popView:view point:point shareText:shareText shareUrlStr:shareUrlStr mailToRecipients:mailToRecipients];
 }
 
 - (void)shareMoreWithVc:(UIViewController *)viewController
