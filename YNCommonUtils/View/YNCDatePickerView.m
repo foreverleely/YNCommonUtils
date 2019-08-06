@@ -96,6 +96,14 @@
 //    self.datePicker.maximumDate = endDate;
 }
 
+- (void)setCancelTitle:(NSAttributedString *)cancelTitle {
+    [self.cancelBtn setAttributedTitle:cancelTitle forState:UIControlStateNormal];
+}
+
+- (void)setConfirmTitle:(NSAttributedString *)confirmTitle {
+    [self.confirmBtn setAttributedTitle:confirmTitle forState:UIControlStateNormal];
+}
+
 #pragma mark - Getters
 
 - (UIButton *)cancelBtn {

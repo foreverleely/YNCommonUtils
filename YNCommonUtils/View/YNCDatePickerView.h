@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void (^chooseBirthDate)(NSDate *date);
 
+@property (nonatomic, strong) NSAttributedString *cancelTitle;
+@property (nonatomic, strong) NSAttributedString *confirmTitle;
+
 @end
 
 NS_ASSUME_NONNULL_END
