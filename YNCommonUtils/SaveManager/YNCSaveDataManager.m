@@ -44,11 +44,11 @@
     id dataModel;
     if (saveData) {
         NSDictionary *dict;
-        if (@available(iOS 12.0, *)) {
-            dict = [NSKeyedUnarchiver unarchivedObjectOfClass:className fromData:saveData error:nil];
-        } else {
+//        if (@available(iOS 12.0, *)) {
+//            dict = [NSKeyedUnarchiver unarchivedObjectOfClass:className fromData:saveData error:nil];
+//        } else {
             dict = [NSKeyedUnarchiver unarchiveObjectWithData:saveData];
-        }
+//        }
         dataModel = [className yy_modelWithJSON:dict];
     }
     if (!dataModel && isCreate) {
