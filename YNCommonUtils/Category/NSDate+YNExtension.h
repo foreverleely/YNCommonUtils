@@ -34,6 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSInteger)ync_daysInMonth:(NSUInteger)month;
 + (NSUInteger)ync_daysInMonth:(NSDate *)date month:(NSUInteger)month;
+- (NSInteger)ync_weekday;
++ (NSInteger)ync_weekday:(NSDate *)date;
+- (NSString *)ync_monthWithMonthNumber;
++ (NSString *)ync_monthWithMonthNumber:(NSInteger)month;
+- (NSString *)ync_dayFromWeekday;
++ (NSString *)ync_dayFromWeekday:(NSDate *)date;
 
 #pragma mark - Constellation
 

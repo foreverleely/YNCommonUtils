@@ -140,6 +140,23 @@
     return 30;
 }
 
+- (NSInteger)ync_weekday {
+    return [NSDate ync_weekday:self];
+}
+
++ (NSInteger)ync_weekday:(NSDate *)date {
+    NSCalendar *gregorian = [[NSCalendar alloc]
+                             initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [gregorian components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitWeekday) fromDate:date];
+    NSInteger weekday = [comps weekday];
+    
+    return weekday;
+}
+
+- (NSString *)ync_monthWithMonthNumber {
+    return [NSDate ync_monthWithMonthNumber:self.ync_month];
+}
+
 + (NSString *)ync_monthWithMonthNumber:(NSInteger)month {
     switch(month) {
         case 1:
@@ -177,6 +194,39 @@
             break;
         case 12:
             return @"December";
+            break;
+        default:
+            break;
+    }
+    return @"";
+}
+
+- (NSString *)ync_dayFromWeekday {
+    return [NSDate ync_dayFromWeekday:self];
+}
+
++ (NSString *)ync_dayFromWeekday:(NSDate *)date {
+    switch([date ync_weekday]) {
+        case 1:
+            return @"星期天";
+            break;
+        case 2:
+            return @"星期一";
+            break;
+        case 3:
+            return @"星期二";
+            break;
+        case 4:
+            return @"星期三";
+            break;
+        case 5:
+            return @"星期四";
+            break;
+        case 6:
+            return @"星期五";
+            break;
+        case 7:
+            return @"星期六";
             break;
         default:
             break;
