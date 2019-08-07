@@ -208,25 +208,25 @@
 + (NSString *)ync_dayFromWeekday:(NSDate *)date {
     switch([date ync_weekday]) {
         case 1:
-            return @"星期天";
+            return @"Sunday";
             break;
         case 2:
-            return @"星期一";
+            return @"Monday";
             break;
         case 3:
-            return @"星期二";
+            return @"Tuesday";
             break;
         case 4:
-            return @"星期三";
+            return @"Wednesday";
             break;
         case 5:
-            return @"星期四";
+            return @"Thursday";
             break;
         case 6:
-            return @"星期五";
+            return @"Friday";
             break;
         case 7:
-            return @"星期六";
+            return @"Saturday";
             break;
         default:
             break;
